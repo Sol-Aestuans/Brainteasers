@@ -1,3 +1,4 @@
+import java.util.HashMap;
 /*
 Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
 
@@ -14,7 +15,7 @@ Output: [0,1]
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> complements = new HashMap(); // Hashmap to store the complements of the indexes
+        HashMap<Integer, Integer> complements = new HashMap<>(); // Hashmap to store the complements of the indexes
         Integer complement = 0;
         for (int i = 0; i < nums.length; i++) { // loop through the nums
             complement = complements.get(target - nums[i]);
