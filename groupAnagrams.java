@@ -16,12 +16,10 @@ public class groupAnagrams {
             }
             String key = Arrays.toString(character_count);
     
-            if (anagram_groups.containsKey(key)) {
-                anagram_groups.get(key).add(s);
-            } else {
+            if (!anagram_groups.containsKey(key)) {
                 anagram_groups.put(key, new ArrayList<>());
-                anagram_groups.get(key).add(s);
             }
+            anagram_groups.get(key).add(s);
         }
         return new ArrayList<>(anagram_groups.values());
     }
